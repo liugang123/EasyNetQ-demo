@@ -13,7 +13,7 @@ namespace com.example.consumer
             RabbitMqConfig.Init();
             // 设置消费者
             MessageReceiver receiver = new MessageReceiver();
-            RabbitMqConfig.advancedBus.Consume(RabbitMqConfig.queue_liugang_test, receiver.Handle, x => x.WithPrefetchCount(5));
+            RabbitMqConfig.advancedBus.Consume(RabbitMqConfig.queue_liugang_test, receiver.Handle, x => x.WithPrefetchCount(1));
 
             Console.ReadLine();
         }
